@@ -1,0 +1,37 @@
+// Solicitar que o usuário insira dois valores
+var valor1 = parseFloat(prompt("Insira o primeiro valor:"));
+var valor2 = parseFloat(prompt("Insira o segundo valor:"));
+
+// Solicitar que o usuário insira o operador (+, -, *, /)
+var operador = prompt("Escolha o operador (+, -, *, /):");
+
+var resultado;
+
+// Verificar o operador e realizar a operação correspondente
+switch (operador) {
+  case "+":
+    resultado = valor1 + valor2;
+    console.log("Resultado da soma: " + resultado);
+    break;
+  case "-":
+    resultado = valor1 - valor2;
+    console.log("Resultado da subtração: " + resultado);
+    break;
+  case "*":
+    resultado = valor1 * valor2;
+    console.log("Resultado da multiplicação: " + resultado);
+    break;
+  case "/":
+    if (valor2 === 0) {
+      console.log("Não é possível dividir por zero.");
+    } else {
+      var quociente = Math.floor(valor1 / valor2);
+      var resto = valor1 % valor2;
+      console.log("Resultado da divisão: Quociente = " + quociente + ", Resto = " + resto);
+    }
+    break;
+  default:
+    console.log("Operador inválido. Use +, -, *, ou /.");
+}
+
+Resultado da divisão: Quociente = 7, Resto = 1
